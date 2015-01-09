@@ -1,4 +1,4 @@
-from data_operations.create_data import CreateData
+from apps.data_operations.create_data import CreateData
 
 __author__ = 'cenk'
 

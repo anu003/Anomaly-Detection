@@ -1,8 +1,10 @@
 import csv
 from datetime import datetime, timedelta
-import os
 import time
 import random
+
+from apps import DATA_PATH
+
 
 __author__ = 'cenk'
 
@@ -15,8 +17,7 @@ class CreateData:
     def __init__(self, **kwargs):
 
         self.log_active = 'log_active' in kwargs and kwargs['log_active']
-        script_path = os.path.dirname(__file__)
-        self.path = kwargs['path'] if 'path' in kwargs   else os.path.join(script_path, '../data/data.csv')
+        self.path = kwargs['path'] if 'path' in kwargs   else DATA_PATH
         self.limit = kwargs['limit'] if 'limit' in kwargs else 3000000
         self.header = kwargs['header'] if 'header' in kwargs   else ['temos', 'start_date', 'end_date',
                                                                      'time_delta', 'value']
