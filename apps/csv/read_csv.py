@@ -3,6 +3,7 @@ import csv
 from apps.redis.redis_instance import Redis
 
 from settings import DATA_PATH
+import settings
 from utils.logger import Logger
 
 
@@ -13,9 +14,8 @@ class ReadCsv(Logger):
     def __init__(self, *args, **kwargs):
         super(ReadCsv, self).__init__(**kwargs)
         self.path = kwargs['path'] if 'path' in kwargs   else DATA_PATH
-        self.header = kwargs['header'] if 'header' in kwargs   else ['temos', 'value', 'time_delta']
-        self.redis_connection = Redis.get_connection()
         self.interface_names = []
+        self.interface_maping = {}
 
     def start(self, *args, **kwargs):
         with open(self.path, 'rb') as csvfile:
@@ -27,8 +27,15 @@ class ReadCsv(Logger):
                     interface_mapping[row[0]] = []
                     self.interface_names.append(row[0])
                 interface_mapping[row[0]].append((row[3], row[4]))
-            for interface in interface_mapping:
-                self.redis_connection.set(interface, interface_mapping[interface])
+            try:
+                if settings.USE_REDIS:
+                    redis_connection = Redis.get_connection()
+                    for interface in interface_mapping:
+                        redis_connection.set(interface, interface_mapping[interface])
+                else:
+                    raise
+            except:
+                self.interface_maping = interface_mapping
 
         csvfile.close()
 
