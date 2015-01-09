@@ -1,4 +1,4 @@
-from apps.data_operations.write_csv import WriteCsv
+from apps.csv.write_csv import WriteCsv
 
 
 __author__ = 'cenk'

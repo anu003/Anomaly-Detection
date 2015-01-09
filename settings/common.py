@@ -8,4 +8,7 @@ DATA_PATH = os.path.join(BASE_PATH, '../data/data.csv')
 
 LOG = True
 
-LIMIT = 3000
+LIMIT = 3000000
+SLEEP_TIME = 0.01
+
+CSV_HEADER = ['temos', 'start_date', 'end_date', 'time_delta', 'value']
