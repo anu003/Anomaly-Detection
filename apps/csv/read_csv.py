@@ -36,7 +36,7 @@ class ReadCsv(Logger):
             except:
                 interface_mapping[self.interface_name] = str(interface_data)
                 self.interface_maping = interface_mapping
-            self.log(interface_mapping)
+            self.log(interface_data)
         csvfile.close()
 
     def get_data(self):
