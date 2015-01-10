@@ -9,7 +9,7 @@ Z_TABLE_PATH = os.path.join(BASE_PATH, '../data/z_table.csv')
 LOG = True
 
 LIMIT = 3000000
-SLEEP_TIME = 0.01
+SLEEP_TIME = 0
 
 CSV_HEADER = ['temos', 'start_date', 'end_date', 'time_delta', 'value']
 

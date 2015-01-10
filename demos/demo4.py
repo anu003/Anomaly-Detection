@@ -4,7 +4,6 @@ from apps.algorithms.mean import Mean
 from apps.algorithms.standart_deviation import StandartDeviation
 from apps.algorithms.z_value import ZValue
 from apps.csv.read_csv import ReadCsv
-from apps.data_operations.create_data import CreateData
 from apps.datasets.dataset import DataSet
 from settings import BASE_PATH, INTERFACE_NAMES
 
@@ -12,10 +11,9 @@ from settings import BASE_PATH, INTERFACE_NAMES
 __author__ = 'cenk'
 
 
-def demo4():
-    path = os.path.join(BASE_PATH, '../data/demo4.csv')
-    klass = CreateData(**{'log_active': False, 'limit': 10000, 'path': path})
-    klass.start()
+def demo4(limit):
+    path = os.path.join(BASE_PATH, '../data/demo' + str(limit) + '.csv')
+
     for interface_name in INTERFACE_NAMES:
         print "Interface Name: %s" % interface_name
         klass = ReadCsv(**{'log_active': False, 'path': path, 'interface_name': interface_name})
@@ -50,6 +48,8 @@ def demo4():
 
 
 if __name__ == "__main__":
-    print "-*-" * 20, "Demo 4 Starts", "-*-" * 20
-    demo4()
-    print "-*-" * 20, "Demo 4 Ends", "-*-" * 20
+    demo4(3000)
+    demo4(30000)
+    demo4(300000)
+    demo4(3000000)
+    demo4(30000000)

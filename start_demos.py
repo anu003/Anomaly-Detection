@@ -17,5 +17,9 @@ if __name__ == "__main__":
     demo3()
     print "-*-" * 20, "Demo 3 Ends", "-*-" * 20
     print "-*-" * 20, "Demo 4 Starts", "-*-" * 20
-    demo4()
+    demo4(3000)
+    demo4(30000)
+    demo4(300000)
+    demo4(3000000)
+    demo4(30000000)
     print "-*-" * 20, "Demo 4 Ends", "-*-" * 20
