@@ -1,3 +1,8 @@
+import math
+
+from apps.algorithms.variance import Variance
+
+
 __author__ = 'cenk'
 
 
@@ -14,11 +19,5 @@ class StandartDeviation:
         return self.__algorithm()
 
     def __algorithm(self):
-        data_length = len(self.data)
-        index = (data_length + 1) / 2
-        if data_length % 2 == 0:
-            index = (data_length / 2 + (data_length + 1) / 2) / 2
-        try:
-            return self.data[index - 1]
-        except:
-            print ""
+        variance = Variance()
+        return round(math.pow(variance.calculate(self.data), 0.5), 4)
