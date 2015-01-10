@@ -22,5 +22,5 @@ if __name__ == "__main__":
     print 300000
     create_demo_data(3000000)
     print 3000000
-    create_demo_data(30000000)
-    print 30000000
+    create_demo_data(12000000)
+    print 12000000

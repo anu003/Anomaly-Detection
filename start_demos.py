@@ -21,5 +21,5 @@ if __name__ == "__main__":
     demo4(30000)
     demo4(300000)
     demo4(3000000)
-    demo4(30000000)
+    demo4(12000000)
     print "-*-" * 20, "Demo 4 Ends", "-*-" * 20
