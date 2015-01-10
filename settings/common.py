@@ -5,7 +5,7 @@ __author__ = 'cenk'
 BASE_PATH = os.path.dirname(__file__)
 
 DATA_PATH = os.path.join(BASE_PATH, '../data/data.csv')
-
+Z_TABLE_PATH = os.path.join(BASE_PATH, '../data/z_table.csv')
 LOG = True
 
 LIMIT = 3000000
@@ -19,3 +19,4 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
 INTERFACE_NAME = "a"
+

@@ -2,6 +2,7 @@ from unittest import TestCase
 from datetime import datetime
 
 from apps.algorithms.mean import Mean
+from apps.algorithms.standart_deviation import StandartDeviation
 
 from apps.algorithms.variance import Variance
 
@@ -31,9 +32,12 @@ class ImplementationTest(TestCase):
         training_list = training_set.get()
         variance = Variance()
         variance_value = variance.calculate(training_list, is_tuple=True, index=1)
+        standart_deviation = StandartDeviation()
+        standart_deviation_value = standart_deviation.calculate(training_list, is_tuple=True, index=1)
         mean = Mean()
         mean_value = mean.calculate(training_list, is_tuple=True, index=1)
         print "Variance: %f" % variance_value
+        print "Standart Deviation: %f" % standart_deviation_value
         print "Mean: %f" % mean_value
 
         print "*" * 10, datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "Finish Test", "*" * 10
