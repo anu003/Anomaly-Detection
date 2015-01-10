@@ -1,4 +1,5 @@
 from unittest import TestCase
+import time
 
 from apps.algorithms.mean import Mean
 

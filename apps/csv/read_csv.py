@@ -25,7 +25,7 @@ class ReadCsv(Logger):
             interface_data = []
             for row in spamreader:
                 if row[0] == self.interface_name:
-                    interface_data.append((row[3], row[4]))
+                    interface_data.append((int(row[3]), int(row[4])))
             try:
                 if settings.USE_REDIS:
                     self.redis_used = True

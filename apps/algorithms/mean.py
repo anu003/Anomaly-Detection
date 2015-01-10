@@ -3,24 +3,23 @@ __author__ = 'cenk'
 
 class Mean:
     def __init__(self):
-        self.data = []
+        self._data = []
+        self.counter = 0
+        self.total = 0
 
     def calculate(self, data, is_tuple=False, index=None):
         if is_tuple:
-            self.data = [obj[index] for obj in data]
+            self._data = [obj[index] for obj in data]
         else:
-            self.data = data
+            self._data = data
 
         return self.__algorithm()
 
     def __algorithm(self):
-        total = 0.0
-        counter = 0
-        for data in self.data:
-            total += float(data)
-            counter += 1
         try:
-            return total / counter
+            return float(sum(self._data)) / len(self._data)
         except ZeroDivisionError:
             print "integer division or modulo by zero"
+
+
 
