@@ -1,5 +1,7 @@
-import redis
-
+try:
+    import redis
+except:
+    print "Redis can't be used now"
 from settings import REDIS_HOST, REDIS_PORT
 
 
