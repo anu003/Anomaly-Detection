@@ -6,7 +6,7 @@ BASE_PATH = os.path.dirname(__file__)
 
 DATA_PATH = os.path.join(BASE_PATH, '../data/data.csv')
 Z_TABLE_PATH = os.path.join(BASE_PATH, '../data/z_table.csv')
-LOG = True
+LOG = False
 
 LIMIT = 3000000
 SLEEP_TIME = 0

@@ -12,7 +12,7 @@ class StandartDeviation:
 
     def calculate(self, data, is_tuple=False, index=None):
         if is_tuple:
-            self._data = sorted([obj[index] for obj in data])
+            self._data = sorted([float(obj[index]) for obj in data])
         else:
             self._data = sorted(data)
 
