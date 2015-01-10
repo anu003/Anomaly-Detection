@@ -28,5 +28,4 @@ class ZValue:
         return self.z_value
 
     def find_from_table(self):
-        value = ZTable().get_value(abs(self.z_value))
-        print value
+        return ZTable().get_value(abs(self.z_value))
