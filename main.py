@@ -20,7 +20,7 @@ if __name__ == "__main__":
     read_klass.start()
     data, name = read_klass.get_data()
     dataset = DataSet()
-    dataset.set(data.get(name))
+    dataset.set(eval(data.get(name)))
     train, validation, test = dataset.split_train_validation_test_data()
     training_list = train.get()
     validation_list = validation.get()

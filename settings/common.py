@@ -19,4 +19,5 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
 INTERFACE_NAME = "a"
+INTERFACE_NAMES = ["a", "b", "c"]
 

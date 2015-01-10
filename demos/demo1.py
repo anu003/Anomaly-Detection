@@ -44,3 +44,9 @@ def demo1():
         table_value = z_value.find_from_table()
         if table_value == -1:
             print "This val is anomaly:", val
+
+
+if __name__ == "__main__":
+    print "-*-" * 20, "Demo 1 Starts", "-*-" * 20
+    demo1()
+    print "-*-" * 20, "Demo 1 Ends", "-*-" * 20

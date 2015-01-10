@@ -21,15 +21,14 @@ class Variance:
 
 
     def __algorithm(self):
-        mean = Mean()
-        mean_value = mean.calculate(self.data)
-        values = map(lambda x: (float(x) - mean_value), self.data)
-        sum_formula = SumFormula()
-        sum_of_powers = sum_formula.calculate(values, power=2)
-
-        result = sum_of_powers / (self.n - 1)
-
         try:
+            mean = Mean()
+            mean_value = mean.calculate(self.data)
+            values = map(lambda x: (float(x) - mean_value), self.data)
+            sum_formula = SumFormula()
+            sum_of_powers = sum_formula.calculate(values, power=2)
+
+            result = sum_of_powers / (self.n - 1)
             return round(result, 4)
         except:
             print ""

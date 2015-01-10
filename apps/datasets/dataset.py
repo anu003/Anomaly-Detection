@@ -8,6 +8,9 @@ class DataSet:
     def __init__(self):
         self._data = None
 
+    def __len__(self):
+        return len(self._data)
+
     def set(self, data, extend=False):
         """
         Sets data to the dataset
