@@ -16,7 +16,7 @@ class MockData(Logger):
         start_date = datetime.now()
         end_date = datetime.now() + timedelta(seconds=sleep_time)
         data['temos'] = interface
-        data['value'] = Randoms.random_with_probability() * sleep_time
+        data['value'] = int(Randoms.random_with_probability() * sleep_time)
         data['start_date'] = start_date.strftime("%Y-%m-%d %H:%M %S")
         data['end_date'] = end_date.strftime("%Y-%m-%d %H:%M %S")
         data['time_delta'] = (end_date - start_date).seconds
