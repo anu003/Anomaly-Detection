@@ -13,7 +13,7 @@ SLEEP_TIME = 0
 
 CSV_HEADER = ['temos', 'start_date', 'end_date', 'time_delta', 'value']
 
-USE_REDIS = True
+USE_REDIS = False
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
