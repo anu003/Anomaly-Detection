@@ -1,3 +1,5 @@
+from datetime import datetime
+
 __author__ = 'cenk'
 
 
@@ -7,4 +9,4 @@ class Logger(object):
 
     def log(self, obj, *args, **kwargs):
         if self.log_active:
-            print obj
+            print "*" * 10, datetime.now().strftime('%Y-%m-%d %H:%M:%S'), obj, "*" * 10
