@@ -17,7 +17,7 @@ class Mean:
         total = 0.0
         counter = 0
         for data in self.data:
-            total += data
+            total += float(data)
             counter += 1
         try:
             return total / counter

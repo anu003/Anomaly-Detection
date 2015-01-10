@@ -19,6 +19,6 @@ class Median:
         if data_length % 2 == 0:
             index = (data_length / 2 + (data_length + 1) / 2) / 2
         try:
-            return self.data[index - 1]
+            return float(self.data[index - 1])
         except:
             print ""

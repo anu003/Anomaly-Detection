@@ -21,7 +21,7 @@ class SumFormula:
     def __algorithm(self):
         total = 0.0
         for num in self.data:
-            total += self.exponential(num, self.power)
+            total += self.exponential(float(num), self.power)
         try:
             return total
         except:
