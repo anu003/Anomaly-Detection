@@ -12,7 +12,8 @@ import settings
 
 __author__ = 'cenk'
 
-if __name__ == "__main__":
+
+def main():
     write_klass = CreateData(**{'log_active': settings.LOG, 'limit': settings.LIMIT})
     write_klass.start()
 
@@ -40,3 +41,6 @@ if __name__ == "__main__":
         else:
             print "This val is anomaly: %f" % val
 
+
+if __name__ == "__main__":
+    main()
